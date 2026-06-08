@@ -2,12 +2,11 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 import re
 
-# Create FastAPI application
+
 app = FastAPI()
 
 
 class TextRequest(BaseModel):
-    """Request model for incoming text."""
     text: str
 
 
