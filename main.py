@@ -11,16 +11,6 @@ class TextRequest(BaseModel):
     text: str
 
 
-@app.get("/")
-def home() -> dict:
-    """
-    Health check endpoint.
-    """
-    return {
-        "message": "Welcome to the Text Analysis API"
-    }
-
-
 @app.post("/analyze")
 def analyze_text(request: TextRequest) -> dict:
     
